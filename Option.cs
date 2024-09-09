@@ -10,8 +10,8 @@ public abstract class Option<T>
 
     private class SomeOption<TValue>(TValue value) : Option<TValue>
     {
-        public override bool IsNone => false;
-        public override bool IsSome => true;
+        public override bool IsNone => true;
+        public override bool IsSome => false;
 
         public override TR Match<TR>(Func<TValue, TR> foo, Func<TR> noFoo)
         {
